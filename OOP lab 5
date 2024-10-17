@@ -1,0 +1,180 @@
+CODE1:
+package player;
+
+/**
+ *
+ * @author dell
+ */
+public class Player {
+
+    String playerName;
+  String position;
+
+    // Constructor
+    public Player(String playerName, String position) {
+        this.playerName = playerName;
+        this.position = position;
+    }
+
+    // Getters
+    public String getPlayerName() {
+        return playerName;
+    }
+
+    public String getPosition() {
+        return position;
+    }
+
+    // Method to display player details
+    public void displayPlayerInfo() {
+        System.out.println("Player Name: " + playerName + ", Position: " + position);
+    }
+}
+public class Team {
+     private Player player1;
+    private Player player2;
+
+    // Constructor
+    public Team() {
+        this.player1 = null;
+        this.player2 = null;
+    }
+
+    // Method to add players to specific positions
+    public void addPlayer1(Player player) {
+        this.player1 = player;
+        System.out.println(player.getPlayerName() + " added to the team as Player 1.");
+    }
+
+    public void addPlayer2(Player player) {
+        this.player2 = player;
+        System.out.println(player.getPlayerName() + " added to the team as Player 2.");
+    }
+
+    // Method to display all players in the team
+    public void displayTeamPlayers() {
+        System.out.println("Team Players:");
+        if (player1 != null) {
+            player1.displayPlayerInfo();
+        } else {
+            System.out.println("Player 1: No player assigned.");
+        }
+
+        if (player2 != null) {
+            player2.displayPlayerInfo();
+        } else {
+            System.out.println("Player 2: No player assigned.");
+        }
+    }
+}
+public class Main {
+     public static void main(String[] args) {
+        // Creating Player objects
+        Player player1 = new Player("alisha", "Forward");
+        Player player2 = new Player("hania", "Midfielder");
+
+        // Creating a Team object
+        Team team = new Team();
+
+        // Adding players to the team
+        team.addPlayer1(player1);
+        team.addPlayer2(player2);
+
+        // Displaying the players in the team
+        team.displayTeamPlayers();
+
+        
+
+        
+    }
+}
+CODE2:
+package cpu;
+
+/**
+ *
+ * @author dell
+ */
+public class CPU {
+private String brand;
+    private String frequency;  // e.g., "3.6GHz"
+
+    // Constructor
+    public CPU(String brand, String frequency) {
+        this.brand = brand;
+        this.frequency = frequency;
+    }
+
+    // Display CPU details
+    public void displayDetails() {
+        System.out.println("CPU Brand: " + brand + ", Frequency: " + frequency);
+    }
+}
+   
+    package cpu;
+
+/**
+ *
+ * @author dell
+ */
+public class RAM {
+     String brand;
+    String capacity;  // e.g., "16GB"
+
+    // Constructor
+    public RAM(String brand, String capacity) {
+        this.brand = brand;
+        this.capacity = capacity;
+    }
+
+    // Display RAM details
+    public void displayDetails() {
+        System.out.println("RAM Brand: " + brand + ", Capacity: " + capacity);
+    }
+}
+public class hardDrive {
+      String brand;
+
+    // Constructor
+    public hardDrive(String brand, String capacity) {
+        this.brand = brand;
+        this.capacity = capacity;
+    }
+
+    // Display HardDrive details
+    public void displayDetails() {
+        System.out.println("Hard Drive Brand: " + brand + ", Capacity: " + capacity);
+    }
+}
+public class Computer {
+     CPU cpu;
+     RAM ram;
+  hardDrive hardDrive;
+
+    // Constructor initializes the components
+    public Computer(String cpuBrand, String cpuFrequency, String ramBrand, String ramCapacity, String hardDriveBrand, String hardDriveCapacity) {
+        this.cpu = new CPU(cpuBrand, cpuFrequency);
+        this.ram = new RAM(ramBrand, ramCapacity);
+        this.hardDrive = new hardDrive(hardDriveBrand, hardDriveCapacity);
+    }
+
+    // Method to display details of all components
+    public void displayComputerDetails() {
+        System.out.println("Computer Components:");
+        cpu.displayDetails();
+        ram.displayDetails();
+        hardDrive.displayDetails();
+    }
+}
+public class Main {
+     public static void main(String[] args) {
+        // Creating a Computer object and initializing its components
+        Computer computer = new Computer("DELL", "3.6GHz", "Corsair", "16GB", "Seagate", "1TB");
+
+        // Displaying details of the computer and its components
+        computer.displayComputerDetails();
+
+        
+    }
+}
+
