@@ -1,0 +1,85 @@
+TASK 1:
+CODE:
+package books;
+
+/**
+ *
+ * @author dell
+ */
+public class Books {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        String[] books = {"english", "urdu", "Chemistry", "oop", "pf"};
+        for (int i = 0; i < books.length; i++) {
+            System.out.println(books[i]);
+
+    }
+}
+TASK 2:
+Code
+public class Oddeven {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+     int n=6;
+       if(n%2==0){
+           System.out.println("number is even");     
+       }
+        else{
+         System.out.println("number is odd");
+       }  
+    }
+}
+TASK 3:
+public class Evennumberprinter {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+          int number = 4;
+       while (number <= 20) {
+            if (number % 2 == 0) {
+                System.out.println(number);
+            }
+            number++;
+      }
+    }
+    
+}
+TASK 4:
+public class Pattern {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        int rows = 4; 
+        int columns=6;
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j <columns; j++) {
+                System.out.print("* ");
+            }
+            System.out.println();
+    } 
+    }
+TASK 5:
+    public class Factorial {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+         int number = 8; 
+       int factorial = 1; 
+        while (number > 0) {
+            factorial *= number; 
+            number--;
+            }
+        System.out.println("The factorial is: " + factorial);
+}
