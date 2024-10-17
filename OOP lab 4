@@ -1,0 +1,106 @@
+TASK 1:
+CODE:
+package patternname;
+
+/**
+ *
+ * @author dell
+ */
+public class Patternname {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        int rows = 7;
+        int cols = 5;
+
+        // Loop through each row for all letters together
+        for (int i = 0; i < rows; i++) {
+
+            // Print A
+            for (int j = 0; j < cols; j++) {
+                if (i == 0 || i == rows / 2 || j == 0 || j == cols - 1) {
+                    System.out.print("*");
+                } else {
+                    System.out.print(" ");
+                }
+            }
+            System.out.print("   "); // Space between letters
+
+            // Print L
+            for (int j = 0; j < cols; j++) {
+                if (j == 0 || i == rows - 1) {
+                    System.out.print("*");
+                } else {
+                    System.out.print(" ");
+                }
+            }
+            System.out.print("   "); // Space between letters
+
+            // Print I
+            for (int j = 0; j < cols; j++) {
+                if (i == 0 || i == rows - 1 || j == cols / 2) {
+                    System.out.print("*");
+                } else {
+                    System.out.print(" ");
+                }
+            }
+            System.out.print("   "); // Space between letters
+
+            // Print S
+            for (int j = 0; j < cols; j++) {
+                if (i == 0 || i == rows - 1 || i == rows / 2 || (j == 0 && i < rows / 2) || (j == cols - 1 && i > rows / 2)) {
+                    System.out.print("*");
+                } else {
+                    System.out.print(" ");
+                }
+            }
+            System.out.print("   "); // Space between letters
+
+            // Print H
+            for (int j = 0; j < cols; j++) {
+                if (j == 0 || j == cols - 1 || i == rows / 2) {
+                    System.out.print("*");
+                } else {
+                    System.out.print(" ");
+                }
+            }
+            System.out.print("   "); // Space between letters
+
+            // Print A (again)
+            for (int j = 0; j < cols; j++) {
+                if (i == 0 || i == rows / 2 || j == 0 || j == cols - 1) {
+                    System.out.print("*");
+                } else {
+                    System.out.print(" ");
+                }
+            }
+
+            // Move to the next row
+            System.out.println();
+        }
+    }
+}
+package laptop1;
+
+import java.util.Scanner;
+
+public class Laptop1 {
+String brand;
+Laptop1(String brand){
+        this.brand =brand;
+       
+    }
+    void displayBrand(String brand) {
+        System.out.println("Laptop1 brand: " + brand);
+    }
+
+    public static void main(String[] args) {
+        System.out.println("Enter the Brand Name");
+        Scanner sc = new Scanner(System.in);
+        String brand = sc.nextLine();
+        Laptop1 pc = new Laptop1(brand);
+        pc.displayBrand(brand);
+}
+}
