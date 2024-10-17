@@ -1,4 +1,4 @@
-WEEK # 1:
+WEEK # 2:
 TASK 1: // task 1
 #include<iostream>
 using namespace std;
@@ -64,3 +64,4 @@ int main(){
 	mycar.displaydetails();
 	return 0;
 }
+
